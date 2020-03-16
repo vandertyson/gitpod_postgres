@@ -22,7 +22,6 @@ ENV PGDATABASE="postgres"
 # tasks from a Dockerfile. This workaround checks, on each bashrc eval, if the
 # PostgreSQL server is running, and if not starts it.
 RUN printf "\n# Auto-start PostgreSQL server.\n[[ \$(pg_ctl status | grep PID) ]] || pg_start > /dev/null\n" >> ~/.bashrc
-RUN sudo apt -y install maven
 RUN git clone https://github.com/thingsboard/thingsboard.git; \    
     cd thingsboard; \
     git checkout release-2.4
