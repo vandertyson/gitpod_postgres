@@ -10,5 +10,3 @@ ports:
 tasks:
   - init: echo 'init script' # runs during prebuild
     command: echo 'start script'
-  - start_postgres: echo 'Start postgres'
-    command: pg_start
