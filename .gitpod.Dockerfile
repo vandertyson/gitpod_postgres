@@ -25,4 +25,4 @@ RUN printf "\n# Auto-start PostgreSQL server.\n[[ \$(pg_ctl status | grep PID) ]
 RUN git clone https://github.com/thingsboard/thingsboard.git; \    
     cd thingsboard; \
     git checkout release-2.4
-RUN sudo apt-get install -y libgtkextra-dev libgconf2-dev libnss3 libasound2 libxtst-dev
+RUN sudo apt-get install -y libnss3-dev
